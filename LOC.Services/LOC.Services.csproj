@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LOC.DataAccess\LOC.DataAccess.csproj" />
+    <ProjectReference Include="..\LOC.Entities\LOC.Entities.csproj" />
+    <ProjectReference Include="..\LOC.Utilities\LOC.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>
