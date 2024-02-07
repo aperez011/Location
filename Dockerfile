@@ -6,11 +6,15 @@ EXPOSE 80
 EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
-WORKDIR /src
+WORKDIR /app
+COPY ["LOC.DataAccess/LOC.DataAccess.csproj", "LOC.DataAccess/"]
+COPY ["LOC.Services/LOC.Services.csproj", "LOC.Services/"]
+COPY ["LOC.Utilities/LOC.Utilities.csproj", "LOC.Utilities/"]
+COPY ["LOC.Entities/LOC.Entities.csproj", "LOC.Entities/"]
 COPY ["LOC.API/LOC.API.csproj", "LOC.API/"]
 RUN dotnet restore "LOC.API/LOC.API.csproj"
 COPY . .
-WORKDIR "/src/LOC.API"
+WORKDIR "/app/LOC.API"
 RUN dotnet build "LOC.API.csproj" -c Release -o /app/build
 
 FROM build AS publish

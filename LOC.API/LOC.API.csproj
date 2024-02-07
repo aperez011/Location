@@ -15,9 +15,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LOC.Entities\LOC.Entities.csproj" />
-    <ProjectReference Include="..\LOC.Services\LOC.Services.csproj" />
-    <ProjectReference Include="..\LOC.Utilities\LOC.Utilities.csproj" />
+    <ProjectReference Include="..\LOC.DataAccess\LOC.DataAccess.csproj">
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\LOC.Entities\LOC.Entities.csproj">
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\LOC.Services\LOC.Services.csproj">
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\LOC.Utilities\LOC.Utilities.csproj">
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>

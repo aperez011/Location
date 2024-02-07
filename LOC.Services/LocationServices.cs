@@ -59,8 +59,8 @@ namespace LOC.Services
                 {
                     Name = location.Name,
                     Address = location.Address,
-                    OpenTime = location.OpenTime,
-                    CloseTime = location.CloseTime
+                    OpenTime = TimeOnly.Parse(location.OpenTime),
+                    CloseTime = TimeOnly.Parse(location.CloseTime)
                 };
 
                 var data = _ctx.Insert(_loc);
